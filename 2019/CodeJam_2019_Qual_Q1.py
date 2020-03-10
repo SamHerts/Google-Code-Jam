@@ -30,14 +30,14 @@ def solver():
         else:
             pos.append(0)
     t = 0
-    for i in pos[::-1]:        
+    for i in pos[::-1]:    # Reverse over positions and add powers of 10 where necessary    
         subber += (10**t)*i
         t += 1
     print("Subber: ", subber)
 
     if len(pos) == 0:
         return [0,n]
-    return [subber, int(n) - subber]
+    return [subber, int(n) - subber] # Return the power of 10 and subtracted value
 
 
 for outp in range(tests):
